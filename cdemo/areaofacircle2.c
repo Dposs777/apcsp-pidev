@@ -7,17 +7,25 @@ float areaOfCircle(float r){
 void main() {
   char input[256];
   int r;
+  int r2;
 
  printf("input a radius\n");
 
  while(1){
-  fgets(input, 256, stdin);
-  if(sscanf(input, "%d", &r) == 1) break;
-  printf("Invalid input\n");
+   fgets(input, 256, stdin);
+   if(sscanf(input, "%d", &r) == 1) break;
+   printf("Invalid input\n");
 
   }
 
-  printf("%f\n", areaOfCircle(r));
+  while(1){
+    fgets(input, 256, stdin);
+    if(sscanf(input, "%d", &r2) == 1) break;
+    printf("Invalid input\n");
+
+  }
+
+  printf("Area: %f - %f\n", areaOfCircle(r), areaOfCircle(r2));
 
 
 //  for(float i=3.5; i<13; i++){
